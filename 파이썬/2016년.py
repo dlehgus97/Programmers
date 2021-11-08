@@ -1,14 +1,7 @@
-#include<iostream>
-#include<string>
-using namespace std;
-
-string solution(int a, int b) {
-    int month[12] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    string day[7] = { "THU", "FRI", "SAT" ,"SUN", "MON","TUE", "WED" };
-    int sum = 0;
-    for (int i = 0; i < a - 1; i++) {
-        sum += month[i];
-    }
-    return day[(sum + b) % 7];
-
-}
+def solution(a, b):
+    month = [ 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+    day = [ "THU", "FRI", "SAT" ,"SUN", "MON","TUE", "WED" ];
+    result =b
+    for i in range(a-1):
+        result +=month[i]
+    return day[result%7]
